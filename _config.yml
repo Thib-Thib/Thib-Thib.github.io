@@ -1,7 +1,7 @@
 # Site settings
 title:          TheAccountant
 description:    "Blog d'économie et de data science"
-baseurl:        "/theaccountant"
+baseurl:        "/thib-thib.github.io"
 url:            "https://github.com/Thib-Thib"
 
 # Google Analytics
