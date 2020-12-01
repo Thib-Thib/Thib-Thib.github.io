@@ -2,7 +2,7 @@
 title:          TheAccountant
 description:    "Blog d'économie et de data science"
 baseurl:        "/theaccountant"
-#url:            "https://github.com/Thib-Thib"
+url:            "https://github.com/Thib-Thib"
 
 # Google Analytics
 #google_analytics: UA—XXXXXXXX-X
