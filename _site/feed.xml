@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/theaccountant/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/theaccountant/" rel="alternate" type="text/html" /><updated>2020-11-30T21:57:15+01:00</updated><id>http://localhost:4000/theaccountant/feed.xml</id><title type="html">TheAccountant</title><subtitle>Blog d'économie et de data science</subtitle><author><name>Thib</name></author><entry><title type="html">Fat Web</title><link href="http://localhost:4000/theaccountant/2020-11-19/fat-web" rel="alternate" type="text/html" title="Fat Web" /><published>2020-11-19T00:00:00+01:00</published><updated>2020-11-19T00:00:00+01:00</updated><id>http://localhost:4000/theaccountant/2020-11-19/fat-web</id><content type="html" xml:base="http://localhost:4000/theaccountant/2020-11-19/fat-web">&lt;p&gt;Une page de texte requiert de 6 à 55 pages de code HTML, selon Frederic Filloux, rédacteur dans la chronique du &lt;a href=&quot;https://mondaynote.com/bloated-html-the-best-and-the-worse-cac6eb06496d#.pnn9sqz35&quot;&gt;Mondaynote&lt;/a&gt; en 2016. Ses propos sont illustrés notamment avec un article du Gardian sur le &lt;a href=&quot;https://www.theguardian.com/sport/2016/aug/06/russian-athletes-banned-paralympic-games-rio&quot;&gt;bannissement des athlètes russes lors des jeux paralympiques à Rio&lt;/a&gt;. En quelques chiffres, l’article contient 757 mots (4 667 caractères) contre 485 527 caractères de code HTML. Autrement dit, le code HTML ne contient que 0,96% de texte utile (lisible par l’humain).&lt;/p&gt;
+
+&lt;h1 id=&quot;une-goutte-dans-un-verre-deau&quot;&gt;Une goutte dans un verre d’eau&lt;/h1&gt;
+
+&lt;p&gt;Aujourd’hui j’ai effectué ces tests pour comparer ; selon &lt;a href=&quot;https://tools.pingdom.com/&quot;&gt;pingdom&lt;/a&gt; et depuis le serveur allemand, la page pèse 2,4MB et l’article contient 761 mots (pour 4 612 caractères) contre 775 780 caractères de code HTML (exporté via le code source de la page). Le code HTML a gonflé de plus de 60% en 4 ans, et le ratio de texte utile est à présent de 0,09% ! L’article n’a pourtant pas changé.&lt;/p&gt;
+
+&lt;p&gt;On reproduit le même test pour un article au hasard du Monde sur &lt;a href=&quot;https://www.lemonde.fr/international/article/2020/11/20/donald-trump-niant-toujours-sa-defaite-doit-intervenir-au-sommet-de-l-apec_6060464_3210.html&quot;&gt;Trump au sommet de l’APEC&lt;/a&gt; et le constat est plutôt similaire : la page pèse 1,6MB, l’article contient 888 mots (5 319 caractères), tandis que sa page HTML compte 119 198 caractères de code. Malgré la baisse de code HTML, le ratio reste surprenant : 4% environ, plus faible encore que la moyenne arbitraire des tests de Frederic Filloux (cf. &lt;a href=&quot;https://mondaynote.com/bloated-html-the-best-and-the-worse-cac6eb06496d#.pnn9sqz35&quot;&gt;mondaynote&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/theaccountant/images/comparaison.jpg&quot; alt=&quot;Image with caption&quot; /&gt;
+&lt;em&gt;À gauche l’article du Monde, à droite le code associé&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;La &lt;strong&gt;crise de l’obésité du web&lt;/strong&gt; (&lt;em&gt;web obesity crisis&lt;/em&gt;) est un phénomène relativement peu connu qui concerne l’augmentation constante du poids des pages Web. Selon &lt;a href=&quot;https://httparchive.org/reports/state-of-the-web&quot;&gt;httparchive&lt;/a&gt;, le poids médian d’une page aujourd’hui (octobre 2020) est d’environ 2MB (2062KB) pour ordinateur et 1,8MB (1891KB) pour mobile, représentant respectivement une augmentation de 341% et de 1206% en 10 ans !&lt;/p&gt;
+
+&lt;p&gt;On note également que les calculs effectués tiennent compte de l’ensemble des imports des ressources requises par la page Web.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/theaccountant/images/weight_web3.png&quot; alt=&quot;Image with caption&quot; /&gt;
+&lt;em&gt;Évolution du poids moyen (en KB) des sites web selon httparchive.org&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Les contenus (lisibles par l’homme) ont peu changé, alors quelles sont ces ressources nécessaires à l’affichage d’une page ?&lt;/p&gt;
+
+&lt;h1 id=&quot;lenvers-du-menu&quot;&gt;L’envers du menu&lt;/h1&gt;
+
+&lt;p&gt;Lors d’une conférence en 2015 de Web Directions intitulé « &lt;a href=&quot;https://www.webdirections.org/blog/the-website-obesity-crisis/&quot;&gt;The Website Obesity Crisis&lt;/a&gt; », l’entrepreneur et développeur web &lt;a href=&quot;https://en.wikipedia.org/wiki/Maciej_Ceg%C5%82owski&quot;&gt;Maciej Cegłowski&lt;/a&gt; explique que la composition d’un site Web peut se résumer de la façon suivante :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Une base de HTML, composée de l’article humainement lisible&lt;/li&gt;
+  &lt;li&gt;Un « énorme tas de déchets », rempli d’informations non pertinentes, d’images lourdes, de publicité, etc.&lt;/li&gt;
+  &lt;li&gt;De scripts de surveillance, notamment avec les traqueurs en JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/theaccountant/images/pyramid_compressed.jpg&quot; alt=&quot;Image with caption&quot; /&gt;
+&lt;em&gt;« Web pyramid as we observe it in the wild » &lt;cite&gt;— Maciej Cegłowski &lt;/cite&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Retrouve t-on ces composants dans l’article du Gardian ?&lt;/p&gt;
+
+&lt;p&gt;L’outil &lt;a href=&quot;https://tools.pingdom.com/&quot;&gt;pingdom&lt;/a&gt; permet d’observer la performance et la constitution d’un site web. Ci-dessous les résultats détaillés sur la répartition de poids de l’article :&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/theaccountant/images/gardian_size_type.png&quot; alt=&quot;Image with caption&quot; /&gt;
+&lt;em&gt;Statistiques de répartition de poids pour la page Web du Gardian selon pingdom&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Plus de la moitié du poids de la page Web concerne les scripts ! Que contiennent-ils ?&lt;/p&gt;
+
+&lt;h1 id=&quot;à-chacun-ses-goûts&quot;&gt;À chacun ses goûts&lt;/h1&gt;
+
+&lt;p&gt;Le cas de l’article du Gardian illustre facilement cette montée en puissance des scripts. Ce sont des morceaux de code qui effectuent des requêtes aux serveurs. Ils permettent notamment de jouer des animations, lancer des vidéos automatiquement, collecter des informations personnelles (métadonnées), etc.&lt;/p&gt;
+
+&lt;p&gt;Certains de ces scripts sont également connus sous le nom de traqueur. Ils s’immiscent partout, du simple formulaire (pour récupérer le sexe ou la date de naissance, …) jusqu’aux boutons de réseaux sociaux (j’aime, partager, …), actifs même sans cliquer. Ils assimilent et analysent les cookies des sites visités, définissent un profil de client type et permettent la présentation de publicité ciblée.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/theaccountant/images/pub_cible.jpg&quot; alt=&quot;Image with caption&quot; /&gt;
+&lt;em&gt;« Depuis l’été 2020, les chaînes de télévision française peuvent diffuser des publicités ciblées en fonction des données personnelles des spectateurs » (selon &lt;a href=&quot;https://www.lemonde.fr/pixels/article/2020/09/05/tout-comprendre-sur-la-publicite-ciblee-qui-s-invite-peu-a-peu-a-la-television_6051051_4408996.html&quot;&gt;LeMonde&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;De nombreuses entreprises investissent sur l’utilisation de traqueurs toujours plus efficaces et malheureusement parfois peu enclin au respect de la vie privée. Selon &lt;a href=&quot;https://fr.statista.com/statistiques/489398/part-publicites-numeriques-depenses-publicitaires-medias-france/&quot;&gt;Statista&lt;/a&gt;, la part des dépenses publicitaires médias dédiée à la publicité digitale en France a jusqu’à doublé entre 2010 et 2017 pour atteindre 34%.&lt;/p&gt;
+
+&lt;p&gt;Ce phénomène assez peu surprenant s’accorde avec le fonctionnement de notre société de consommation. La publicité est d’autant plus rentable qu’elle est ciblée, d’où l’importance de l’efficacité des traqueurs. Plus on vous connaît, plus les propositions sont pertinentes. En dehors des controverses via la vie privée, ces innovations permettent une utilisation optimisée de la publicité.&lt;/p&gt;
+
+&lt;h1 id=&quot;des-serveurs-bousculés&quot;&gt;Des serveurs bousculés&lt;/h1&gt;
+
+&lt;p&gt;Une autre problématique concerne le type des sites web. On en distingue deux :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Le site &lt;strong&gt;statique&lt;/strong&gt;, constitué exclusivement de fichiers HTML et CSS stockés sur un serveur. Ces fichiers sont transmis du serveur au navigateur (vous) pour l’affichage de la page.&lt;/li&gt;
+  &lt;li&gt;Le site &lt;strong&gt;dynamique&lt;/strong&gt; est également constitué de fichiers HTML, CSS mais possède en plus une base de donnée, qui sera interprétée par le serveur à l’aide d’un langage serveur (exemple : PHP). Le serveur génère lui-même la page HTML à partir du modèle qu’on lui confie, ce qui permet de modifier l’affichage d’information de la page en fonction de l’utilisateur.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/theaccountant/images/page-statique-et-page-dynamique.png&quot; alt=&quot;Image with caption&quot; /&gt;
+&lt;em&gt;Différence entre une page Web statique et dynamique selon &lt;a href=&quot;https://www.imedias.pro/cours-en-ligne/web-internet/page-web-page-internet/pages-statiques-et-dynamiques/&quot;&gt;imedia&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Les &lt;strong&gt;sites statiques&lt;/strong&gt; sont très performants par leur vitesse et leur fiabilité. Cependant, ils sont souvent délaissés à l’instar des &lt;strong&gt;sites dynamiques&lt;/strong&gt; qui offrent plus d’interactivité avec l’utilisateur par le biais de login, commentaires, formulaires, etc. Environ 40% des sites web sont aujourd’hui créés à partir du seul &lt;strong&gt;gestionnaire de contenu&lt;/strong&gt; WordPress (&lt;strong&gt;CMS&lt;/strong&gt;).&lt;/p&gt;
+
+&lt;p&gt;Les sites dynamiques traitent plus d’informations qu’un site statique, ce qui peut s’observer via le nombre de &lt;a href=&quot;https://assiste.com/Requete_HTTP.html&quot;&gt;requêtes HTTP&lt;/a&gt; envoyées au serveur, qui les analyse pour ensuite fabriquer une réponse adaptée. L’analyse pingdom sur l’article du Gardian détaille ce nombre de requêtes :&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/theaccountant/images/gardian_requests_type.png&quot; alt=&quot;Image with caption&quot; /&gt;
+&lt;em&gt;Statistique du nombre de requête envoyé aux serveurs pour l’article du Gardian selon pingdom&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;La majorité des requêtes employés permettent ici de récupérer des images (78, par exemple pour illustrer d’autres articles), ainsi que des scripts (63) pour collecter des informations sur l’utilisateur. À noter que des &lt;strong&gt;cookies&lt;/strong&gt; sont téléchargés pour chaque script, conservant des données utilisateurs pour faciliter la navigation.&lt;/p&gt;
+
+&lt;p&gt;Ainsi, les &lt;strong&gt;sites dynamiques&lt;/strong&gt; demandent donc beaucoup plus de travail aux serveurs. Cette évolution croissante des requêtes qu’on leur soumet augmente la complexité de leur gestion et les rend d’autant plus vulnérables aux cyberattaques. Les coûts en électricité pour les maintenir (climatisation, contrôle de l’air, surveillance, …) sont d’autant plus considérables qu’ils nécessitent de plus en plus d’espace. Il faut alors les renforcer, les optimiser et les agrandir.&lt;/p&gt;
+
+&lt;p&gt;Une majorité d’utilisateur n’a pas réellement besoin d’un site dynamique en termes fonctionnels. Si la finalité consiste en des pages simples comme un site vitrine d’entreprise, un profil personnel ou un blog, des solutions alternatives existent. On retrouve par exemple des &lt;strong&gt;générateurs de sites statiques&lt;/strong&gt; tels que &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; ou &lt;a href=&quot;https://gohugo.io/&quot;&gt;Hugo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;réétudier-son-régime&quot;&gt;Réétudier son régime&lt;/h1&gt;
+
+&lt;p&gt;La crise de l’obésité du Web est encore trop peu discutée aujourd’hui. L’un des moyens pour le préserver serait de simplifier au maximum la production des sites. Cependant, les besoins croissants de fidélisation des utilisateurs requièrent toujours plus de ressources. Une prise de conscience est nécessaire pour responsabiliser et comprendre les risques liés au web, mais semble difficile dans notre société de consommation.&lt;/p&gt;</content><author><name>Thib</name></author><category term="Web" /><summary type="html">Une page de texte requiert de 6 à 55 pages de code HTML, selon Frederic Filloux, rédacteur dans la chronique du Mondaynote en 2016. Ses propos sont illustrés notamment avec un article du Gardian sur le bannissement des athlètes russes lors des jeux paralympiques à Rio. En quelques chiffres, l’article contient 757 mots (4 667 caractères) contre 485 527 caractères de code HTML. Autrement dit, le code HTML ne contient que 0,96% de texte utile (lisible par l’humain).</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/theaccountant/images/arnaud.jpg" /><media:content medium="image" url="http://localhost:4000/theaccountant/images/arnaud.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Comptabilité-Maison</title><link href="http://localhost:4000/theaccountant/2020-09-23/comptabilite-maison" rel="alternate" type="text/html" title="Comptabilité-Maison" /><published>2020-09-23T00:00:00+02:00</published><updated>2020-09-23T00:00:00+02:00</updated><id>http://localhost:4000/theaccountant/2020-09-23/comptabilite-maison</id><content type="html" xml:base="http://localhost:4000/theaccountant/2020-09-23/comptabilite-maison">&lt;p&gt;Connaissez-vous le revenu moyen de votre ménage ? Pouvez-vous établir les coûts de vos dernières vacances en totalité ? Savez-vous combien vous dépensez en moyenne en alimentaire chaque mois ?&lt;/p&gt;
+
+&lt;p&gt;Ces questions se posent lorsqu’on s’intéresse aux stratégies de gestion financière saine et il est impossible d’y répondre avec ses seuls relevés bancaires bruts. C’est là qu’intervient la comptabilité. Focus sur cet outil injustement sous-estimé.&lt;/p&gt;
+
+&lt;h1 id=&quot;pourquoi-faire-sa-comptabilité-&quot;&gt;Pourquoi faire sa comptabilité ?&lt;/h1&gt;
+
+&lt;p&gt;Wikipédia définit la comptabilité comme un « ensemble de convention permettant de recueillir les données financières dans une unité monétaire afin de les analyser pour prendre des décisions ».&lt;/p&gt;
+
+&lt;p&gt;Concrètement, c’est un outil qui va permettre de mieux gérer son budget, d’améliorer le contrôle de ses finances et par extension d’encadrer sa liberté financière. Car évidement, la comptabilité ne doit pas être synonyme de contrainte ou d’interdiction de loisirs comme on pourrait l’imaginer. C’est avant tout pour faire les bons choix.&lt;/p&gt;
+
+&lt;h2 id=&quot;les-avantages&quot;&gt;Les avantages&lt;/h2&gt;
+
+&lt;p&gt;Outre l’inconvénient d’y passer un peu de temps (environ 2 heures par semaine), la comptabilité présente pour moi de nombreux avantages (liste non exhaustive) :&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;C’est à la portée de tous ceux qui s’intéresse au sujet. Pas besoin de notions comptables de haute voltige pour cette affaire, le b.a.-ba est suffisant.&lt;/li&gt;
+  &lt;li&gt;Une comptabilité rigoureuse permet de déceler les erreurs que l’on peut manquer, grâce à la prise de recul. À titre personnel, elle m’a permis d’obtenir remboursement de frais payés en double, réclamés par mon agence immobilière.&lt;/li&gt;
+  &lt;li&gt;Le but principal permet de connaître l’état de mes propres finances. On sait précisément combien on dépense et dans quelle catégorie. C’est l’utilité primordiale à mon sens, pour ceux qui souhaitent instaurer et observer des stratégies budgétaires (comme la règle du 50-30-20).&lt;/li&gt;
+  &lt;li&gt;Découlant de l’avantage précédant, le fait de connaître exactement ses dépenses permet d’anticiper les futures et d’éviter des problèmes.&lt;/li&gt;
+  &lt;li&gt;Enfin, elle apporte une certaine clairvoyance pour ceux qui s’intéressent à une gestion financière plus poussée, comme la bourse.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;le-découpage-comptable&quot;&gt;Le découpage comptable&lt;/h1&gt;
+
+&lt;p&gt;La comptabilité n’est pas qu’une simple vérification du solde bancaire, elle permet d’aller beaucoup plus loin en allouant des parts entre différentes catégories (dépenses et investissement par exemple), afin d’observer les écarts trop important d’un mois sur l’autre, d’élaborer des stratégies financières sur le long terme pour l’achat d’une maison ou encore la préparation de sa retraite.&lt;/p&gt;
+
+&lt;h2 id=&quot;trois-types-de-dépenses&quot;&gt;Trois types de dépenses&lt;/h2&gt;
+
+&lt;p&gt;En général, les différents conseils qu’on trouve sur le web distinguent deux types de dépenses à calculer (fixes et variables). J’en ai admis une troisième pour une certaine raison présentée ci-après :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Dépenses fixes&lt;/strong&gt; : elles correspondent aux dépenses durables et difficilement réductible : le loyer, les assurances, les factures d’énergie, l’alimentaire, etc. Cette part reste plutôt constante.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Dépenses variables&lt;/strong&gt; : elles sont relatives aux loisirs, comme les restaurants, les vacances, les voyages, etc. Cette part est très variable selon les mois, donc il est plus intéressant d’en faire une moyenne annuelle. Il est possible de s’adapter en cas de crise.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Dépenses exceptionnelles&lt;/strong&gt; : elles sont rares et plutôt élevées (sinon elles seraient noyées dans les dépenses variables). J’y admets principalement les achats d’électroménager, les cautions, les honoraires, etc. Ces dépenses sont particulières et il est également possible de s’adapter pour les éviter.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;On retrouve fréquemment la règle des 50-30-20. Elle stipule qu’une bonne gestion budgétaire revient à fixer sa part des dépenses fixes aux alentours de 50% de ses revenus, 30% aux dépenses variables et 20% à l’épargne. Mais cette règle n’est viable, à mon sens, qu’à partir et jusqu’à un certain niveau de revenus.&lt;/p&gt;
+
+&lt;h2 id=&quot;trois-types-dinvestissement--épargne&quot;&gt;Trois types d’investissement / épargne&lt;/h2&gt;
+
+&lt;p&gt;C’est pour cette problématique, particulièrement intéressante, que j’ai mis en place la comptabilité. Comment répartir l’argent épargné ? Voici les trois portions que je me suis constitué :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Épargne de précaution&lt;/strong&gt; : c’est une part importante de l’épargne car elle permet d’amortir les coups durs et les imprévus. Mais elle sert aussi pour les achats de long terme comme les produits d’électroménager ou une voiture. C’est donc dans cette réserve que l’on pioche pour les dépenses exceptionnelles. Cette part est conservée sur un livret A, facile d’accès pour des retraits rapides.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Investissement&lt;/strong&gt; (long terme) : cette portion d’argent est la plus intéressante financièrement car elle est investie sur les marchés boursiers mais pour une finalité de long-terme. Ce n’est pas de la spéculation, l’argent est placé pour un minimum de 5 ans. On le laisse fructifier. Les dividendes reçus sont injectés dans les revenus ou permettent de réinvestir dans d’autres actions.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Spéculation&lt;/strong&gt; (court terme) : c’est une petite part que l’on pourrait qualifiée de finance expérimentale, avec l’acquisition de titres boursiers d’entreprise à risque, start-up, cryptomonnaie, paris sportifs, etc. L’argent n’est pas joué « au hasard » mais je préfère le considérer directement comme perdu à partir du moment où il est investi.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;quel-outil-pour-la-comptabilité-&quot;&gt;Quel outil pour la comptabilité ?&lt;/h1&gt;
+
+&lt;p&gt;Si vous êtes convaincu ou tenté par l’expérience, la prochaine question concerne le logiciel en question.&lt;/p&gt;
+
+&lt;p&gt;La première comptabilité que j’ai tenu était sur le tableur de LibreOffice mais il imposait une gestion particulière et trop limitée à mon goût. Son manque d’option comptable (sans avoir à bidouiller des macros) a fini par me décider à m’orienter vers de réels logiciels comptables.&lt;/p&gt;
+
+&lt;p&gt;Je ne m’attarde pas sur les différents logiciels (gratuits ou payants) et fais une rapide présentation de celui qui me correspond le mieux : GnuCash. Très puissant, gratuit, avec un système en partie double, il possède une multitude d’options graphiques (bilan, camembert, graphique, …). Tout ce qu’il faut pour malaxer les données comme on veut !&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/theaccountant/images/gnucash.png&quot; alt=&quot;Image with caption&quot; /&gt;
+&lt;em&gt;Exemple de Checking Account sur GnuCash (&lt;a href=&quot;https://wiki.gnucash.org/wiki/GnuCash&quot;&gt;source&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Ce billet n’ayant pas vocation d’un tutoriel, je laisse le soin d’aller observer les démos et tutos disponibles sur le web.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/theaccountant/images/gnucash_graphics.png&quot; alt=&quot;Image with caption&quot; /&gt;
+&lt;em&gt;Exemples de graphiques sur GnuCash (sources : &lt;a href=&quot;https://tweakers.net/downloads/43909/gnucash-30.html&quot;&gt;Tweakers&lt;/a&gt;, &lt;a href=&quot;https://www.csun.io/2020/05/17/gnucash-finance.html&quot;&gt;CameronSun&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Enfin, il existe des solutions de comptabilité sur smartphone, bien que je ne les ai pas testées personnellement (je préfère travailler sur ordinateur plutôt que sur petit écran). Des applications ont été développé ces dernières années et ont reçu de nombreux avis positifs, par exemple Bankin. Néanmoins, certaines fonctionnalités sont encore manquantes, comme les dépenses par catégorie en fonction du temps.&lt;/p&gt;
+
+&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
+
+&lt;p&gt;La comptabilité de mes revenus et dépenses me permet d’élaborer des stratégies budgétaires pour ma finance. Il m’est inconcevable de m’en passer aujourd’hui tant je considère cette mine d’information comme essentielle. À plus large raison, elle me permet de doser confortablement mes loisirs pour en profiter au maximum sans me retrouver en danger.&lt;/p&gt;
+
+&lt;p&gt;Beaucoup de méthodes sont disponibles aujourd’hui pour présenter des moyens de s’enrichir. Elles considèrent généralement que l’on possède déjà des connaissances précises liées à sa situation financière mais parlent peu de comptabilité, voire pas du tout (à l’exception de &lt;em&gt;Père Riche, Père Pauvre&lt;/em&gt; de KIYOSAKI, qui en parle succinctement dans sa quatrième leçon). Ce manque cruel est, à mon sens, le point de départ pour une stabilité et un enrichissement personnel.&lt;/p&gt;</content><author><name>Thib</name></author><category term="Économie" /><summary type="html">Connaissez-vous le revenu moyen de votre ménage ? Pouvez-vous établir les coûts de vos dernières vacances en totalité ? Savez-vous combien vous dépensez en moyenne en alimentaire chaque mois ?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/theaccountant/images/arnaud.jpg" /><media:content medium="image" url="http://localhost:4000/theaccountant/images/arnaud.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Data Science &amp;amp; Économie</title><link href="http://localhost:4000/theaccountant/2020-08-05/datascience-economie" rel="alternate" type="text/html" title="Data Science &amp;amp; Économie" /><published>2020-08-05T00:00:00+02:00</published><updated>2020-08-05T00:00:00+02:00</updated><id>http://localhost:4000/theaccountant/2020-08-05/datascience-economie</id><content type="html" xml:base="http://localhost:4000/theaccountant/2020-08-05/datascience-economie">&lt;p&gt;Ces dernières années, les nouvelles technologies ont généré des données massives appelées big data. Ces données précieuses, reflet de nos habitudes de consommation, sont convoitées par les entreprises. Analyste économique de formation, la data science est un domaine complémentaire que j’ai investigué afin d’en tirer une plus-value personnelle et professionnelle. Focus sur le métier d’économiste data scientist.&lt;/p&gt;
+
+&lt;h1 id=&quot;caractéristiques-de-la--datafication--&quot;&gt;Caractéristiques de la « datafication » ?&lt;/h1&gt;
+
+&lt;p&gt;L’amélioration constante des Nouvelles Technologies de l’Information et de la Communication (NTIC) ont provoqué une explosion des flux de données disponibles, avec une accumulation massive de données numériques : le big data. Cette nouvelle masse de donnée apporte de nouveaux moyens dans la création de valeur ajoutée pour les entreprises. Avec ce nouvel or noir, les stratégies de concurrence changent et les structures de marché évoluent. L’offre et la demande de ces données sont exponentielles.&lt;/p&gt;
+
+&lt;p&gt;En voici un exemple :&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Du &lt;strong&gt;côté de l’offre&lt;/strong&gt;, trois sources différentes sont valorisées par les entreprises :
+    &lt;ol&gt;
+      &lt;li&gt;les données en accès libre (secteur public, organisation non gouvernementale, etc.)&lt;/li&gt;
+      &lt;li&gt;les données créées par les entreprises elles-même (vente de produit par exemple)&lt;/li&gt;
+      &lt;li&gt;les données des consommateurs, c’est-à-dire vous et moi … On parle de phénomène de numérisation et de datafication (likes, notations, partages de photo, etc.).&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Du &lt;strong&gt;côté de la demande&lt;/strong&gt;, les entreprises privées et publiques recherchent ces données pour améliorer leur stratégie économique et comprendre nos comportements de consommateurs. Elles sont collectées, stockées puis analysées pour en extraire de l’information, qui contribuera à la prise de décision.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Pour traiter toutes ces données, une nouvelle discipline scientifique a émergé : la data science. Son principal objectif est d’accroître et d’optimiser la valeur des données en les transformant en informations. Le data scientist répond ainsi à des problèmes commerciaux sur des données à grande échelle pour l’aide à la décision.&lt;/p&gt;
+
+&lt;h1 id=&quot;comparaison-entre-data-scientist-et-économiste&quot;&gt;Comparaison entre data scientist et économiste&lt;/h1&gt;
+
+&lt;p&gt;Le data scientist peut être vu comme une évolution du data analyst. La différence se situe sur la quantité de données traitées et leur méthode de traitement : le data scientist étudie une masse de données hétérogènes (données métiers, métadonnées), tandis que le data analyst est plus spécialisé sur un domaine en particulier. De manière générale, ils sont chargés de traduire un problème business en problème mathématique. Ils collectent les sources de données, les traitent et les valorisent pour les interpréter.&lt;/p&gt;
+
+&lt;p&gt;La formation d’un data scientist nécessite une triple compétence :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;informatique&lt;/strong&gt; (Python, R) et gestion de base de données (SQL) ;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;mathématiques&lt;/strong&gt; et &lt;strong&gt;statistiques&lt;/strong&gt; pour répondre aux problèmes de régression, classification et optimisation pour la prédiction ;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;communication&lt;/strong&gt; pour comprendre les besoins métier et l’interprétation des résultats.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Les études universitaires en économie (parcours LMD) permet de former des data analysts et la passerelle vers le métier de data scientist est plutôt simple d’accès. Un économiste est formé pour décomposer des systèmes complexes (tel que le fonctionnement d’un marché) en analyses accessibles et interprétables (modèle d’offre et de demande). Ils sont capables d’orienter les décisions par l’étude des données et le repérage des tendances de l’activité en se basant sur la théorie et les concepts économiques comme support. Ainsi ils sont en capacité de répondre à une question floue avec des termes compréhensibles.&lt;/p&gt;
+
+&lt;p&gt;Concrètement, la formation en économie est axée sur trois points :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;macro/micro-économie, qui est l’étude des tendances et développement économiques à différentes échelles grâce à la théorie économique ;&lt;/li&gt;
+  &lt;li&gt;mathématiques et statistiques pour construire des modèles de régression ou de classification, principalement utilisé en économétrie ;&lt;/li&gt;
+  &lt;li&gt;gestion, regroupant plusieurs domaines tels que la comptabilité générale ou nationale, gestion de projet, etc.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;À cela s’ajoute une spécialisation en Master (finance, gestion, politique publique, santé, etc). Comme nous allons le voir, la formation en économétrie (mathématiques / statistiques / théorie économique) permet un croisement avec la data science. Ces deux domaines sont complémentaires et apportent des solutions distinctes pour des problématiques similaires.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/theaccountant/images/data_pyramid.png&quot; alt=&quot;Image with caption&quot; /&gt;
+&lt;em&gt;Data pyramid et les métiers associés&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;pourquoi-un-économiste-peut-il-faire-un-très-bon-data-scientist-&quot;&gt;Pourquoi un économiste peut-il faire un très bon data scientist ?&lt;/h1&gt;
+
+&lt;p&gt;Pour illustrer cette complémentarité entre économie et data science, voici un exemple de problématique dans le secteur bancaire, avec des solutions pouvant servir à deux parties prenantes :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Économie&lt;/strong&gt; (accent sur la &lt;em&gt;causalité&lt;/em&gt;) : quels sont les principaux facteurs qui augmentent le risque de crédit ? Un analyste financier peut identifier des moyens de rééquilibrer un portefeuille en réduisant l’exposition aux facteurs de risque de crédit les plus importants.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Data science&lt;/strong&gt; (accent sur la &lt;em&gt;prédiction&lt;/em&gt;) : quel est le meilleur modèle pour prédire le risque de crédit ? Un autre analyste peut prédire le risque face à de nouveaux candidats via un modèle de machine learning.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Cet exemple spécifique traite du secteur bancaire, mais cette complémentarité s’étend à d’autres domaines : assurance, santé, politique publique, recherche, etc. Partant de ce constat, la complémentarité des deux métiers est alléchante pour bien cerner le besoin du client et y répondre de la façon la plus précise. Les économistes data scientist sont habitués à traiter dans ces domaines, ils connaissent les problématiques et sont entraînés aux interprétations, ce qui leurs fournit un avantage et une forte plus-value. Cette double casquette leur permettent de distinguer les questionnements d’inférence ou de prédiction et de bien choisir la méthode d’analyse en fonction des demandes/besoins de l’entreprise.&lt;/p&gt;
+
+&lt;p&gt;D’un point de vue technique, les économistes connaissent déjà le machine learning car ils ont toutes les bases nécessaires à la bonne compréhension des méthodes de data science. Quelques exemples d’illustration :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;de nombreux modèles sont basés sur les régressions linéaires et logarithmiques, qui sont au programme économique ;&lt;/li&gt;
+  &lt;li&gt;les réseaux de neurones sont des couches de régressions logistiques pour modéliser des relations non linéaires plus complexes qu’une seule régression ;&lt;/li&gt;
+  &lt;li&gt;la notion d’hétéroscédasticité présente dans les support vector machine (SVM) est fondamentale en économétrie.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Au niveau de la programmation, les économistes sont habitués au langage R ou SAS et n’auront aucun mal à passer en Python, qui possèdent de nombreux packages open source. Ils pourront également se former via des MOOCs aux méthodes de data sciences qui sont accessibles. Enfin, certains Masters commencent à proposer des formations duales « Économie / Data Science » (exemple avec l’ENSAE qui forme des « &lt;a href=&quot;http://variances.eu/?p=3997&quot;&gt;data strategist&lt;/a&gt; ») et des DU se distinguent davantage. Ce sont des métiers qui évoluent dans l’air du temps et du numérique. Avoir les deux types de formations est donc un avantage pour la personne ainsi que pour l’entreprise !&lt;/p&gt;
+
+&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
+
+&lt;p&gt;La spécialisation d’un économiste en data science peut s’avérer extrêmement payante pour la diversité des méthodes innovantes et précises. L’investissement est relativement faible pour cette montée en compétence et apportera une plus-value dans la compréhension des problématiques et des solutions métiers afin de mieux accompagner les entreprises dans l’aide à la décision.&lt;/p&gt;</content><author><name>Thib</name></author><category term="DataScience" /><category term="Économie" /><summary type="html">Ces dernières années, les nouvelles technologies ont généré des données massives appelées big data. Ces données précieuses, reflet de nos habitudes de consommation, sont convoitées par les entreprises. Analyste économique de formation, la data science est un domaine complémentaire que j’ai investigué afin d’en tirer une plus-value personnelle et professionnelle. Focus sur le métier d’économiste data scientist.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/theaccountant/images/arnaud.jpg" /><media:content medium="image" url="http://localhost:4000/theaccountant/images/arnaud.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
