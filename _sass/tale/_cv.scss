@@ -1,0 +1,43 @@
+.cv-row:after,.cv-row:before{
+	content:"";
+	display:table;
+    clear:both;
+    margin-top: 30px;
+}
+
+.cv-third{
+	float:left;
+    width:33.33333%;
+    color:#000;
+    text-align: center;
+}
+
+.cv-bottombar{
+	border-bottom:3px solid #ccc;
+}
+
+.cv-hover-light-grey:hover{
+	color:#000;
+    background-color:#f1f1f1;
+    font-weight: bold;
+}
+
+.cv-padding{
+	padding:10px 16px
+}
+
+.cv-border{
+    border-color:#000000;
+    font-weight: bold;
+}
+
+.profil-photo {
+  float: left;
+  border-radius: 50%;
+  width: 18%;
+  margin-right: 20px;
+}
+
+.profil-content {
+  display: inline;
+}

@@ -5,18 +5,17 @@ layout: default
 <div class="catalogue">
   {% for post in paginator.posts %}
     <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
-      
-      <div class="image-box">
+      <div class="catalogue-image-box">
         <img src={{ post.image }}>
       </div>
 
-      <div class="post-title-box">
+      <div class="catalogue-title-box">
         <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%d/%m/%Y" }}</time>
         <h1 class="catalogue-title">{{ post.title }}</h1>
         <div class="catalogue-line"></div>
       </div>
 
-      <p>
+      <p class="catalogue-post-content">
         {{ post.content | strip_html | truncatewords: 30 }}
       </p>
     </a>

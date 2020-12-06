@@ -3,7 +3,7 @@ layout: post
 title: "Data Science & Économie"
 author: Thib
 tags: DataScience Économie
-image: images/arnaud.jpg
+image: images/data-analysis.svg
 ---
 
 Ces dernières années, les nouvelles technologies ont généré des données massives appelées big data. Ces données précieuses, reflet de nos habitudes de consommation, sont convoitées par les entreprises. Analyste économique de formation, la data science est un domaine complémentaire que j’ai investigué afin d’en tirer une plus-value personnelle et professionnelle. Focus sur le métier d’économiste data scientist.

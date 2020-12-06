@@ -3,7 +3,7 @@ layout: post
 title: "Comptabilité-Maison"
 author: Thib
 tags: Économie
-image: images/arnaud.jpg
+image: images/accounting.svg
 ---
 
 Connaissez-vous le revenu moyen de votre ménage ? Pouvez-vous établir les coûts de vos dernières vacances en totalité ? Savez-vous combien vous dépensez en moyenne en alimentaire chaque mois ?

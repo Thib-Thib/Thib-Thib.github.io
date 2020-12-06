@@ -1,0 +1,28 @@
+<h1 class="title">{{site.skills_title}}</h1>
+
+<div id="skills">
+  <input type="radio" id="all" name="filter" checked />
+  <label class="filter-button neumorphism-button" for="all">All</label>
+  <input type="radio" id="formations" name="filter" />
+  <label class="filter-button neumorphism-button" for="formations">formations</label>
+  <input type="radio" id="experiences" name="filter" />
+  <label class="filter-button neumorphism-button" for="experiences">experiences</label>
+  <input type="radio" id="projets" name="filter" />
+  <label class="filter-button neumorphism-button" for="projets">projets</label>
+
+  {% for language in site.data.skills-formations %}
+    <div skill-type="formations">
+      {{content.formations}}
+    </div>
+  {% endfor %}
+  {% for experiences in site.data.skills-experiences %}
+    <div skill-type="experiences">
+      {{content.experiences}}
+    </div>
+  {% endfor %}
+  {% for projets in site.data.skills-projets %}
+    <div skill-type="projets">
+      {{content.projets}}
+    </div>
+  {% endfor %}
+</div>
