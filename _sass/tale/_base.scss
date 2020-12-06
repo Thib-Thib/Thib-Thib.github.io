@@ -15,7 +15,7 @@ html {
   overflow-y: scroll;
   font-size: 16px;
   @media (max-width: 700px) {
-    font-size: 70%;
+    font-size: 80%;
   }
 }
 
@@ -31,7 +31,7 @@ h5,
 h6 {
   color: $default-shade;
   font-family: $serif;
-  line-height: normal;
+  line-height: normal;  
 }
 
 a {

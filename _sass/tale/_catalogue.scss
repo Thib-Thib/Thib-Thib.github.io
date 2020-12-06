@@ -10,6 +10,9 @@
     width: 12.5%;
     margin-right: 20px;
     margin-bottom: 5px;
+    @media (max-width: 700px) {
+      width: 16%;
+    }
   }
   
   &-title-box{
@@ -58,5 +61,8 @@
     font-size: 2rem;
     font-weight: 700;
     margin: .5rem 0;
+    @media (max-width: 700px) {
+      font-size: 130%;
+    }
   }
 }
