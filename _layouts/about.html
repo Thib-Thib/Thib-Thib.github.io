@@ -15,10 +15,8 @@ layout: default
       <p>Bonjour, je m’appelle <strong>Thibault CLÉMENT</strong> et suis <strong>Data Scientist Économiste</strong>.</p>
       <p>À travers une approche innovante et rigoureuse combinant des outils de data science et d’économétrie,
          j’analyse les enjeux économiques pour répondre aux problèmes d’optimisation et de stratégie d’entreprise.</p>
-      <p>Une présentation plus détaillée de mon curriculum vitæ est disponible ci-dessous,
-         et vous pouvez télécharger la version .pdf <a href="../images/tclement-cv-blog.pdf" download>ici</a>.</p>
-      <p>N'hésitez pas à me contacter sur <a href="https://www.linkedin.com/in/t-clement/">LinkedIn</a>
-         ou par <a href="mailto:thibault.fb@gmail.com">mail</a>.
+      <p>Une présentation plus détaillée de mon curriculum vitæ est disponible ci-dessous et vous pouvez télécharger la version .pdf <a href="../images/tclement-cv-blog.pdf" download>ici</a>.</p>
+      <p>Vous pouvez également me contacter via <a href="https://www.linkedin.com/in/t-clement/">LinkedIn</a>.</p>
     </div>
 </div>
 
@@ -26,7 +24,7 @@ layout: default
   <div>
     <div class="cv-row">
       <a href="javascript:void(0)" onclick="openItem(event, 'Formations');">
-        <div class="cv-third tablink cv-bottombar cv-hover-light-grey cv-padding">Formations</div>
+        <div class="default cv-third tablink cv-bottombar cv-hover-light-grey cv-padding" id="defaultOpen">Formations</div>
       </a>
       <a href="javascript:void(0)" onclick="openItem(event, 'Expériences');">
         <div class="cv-third tablink cv-bottombar cv-hover-light-grey cv-padding">Expériences</div>
@@ -36,7 +34,7 @@ layout: default
       </a>
     </div>
   
-    <div id="Formations" class="item" style="display:none">
+    <div id="Formations" class="item">
       <div class="timeline">
         <div class="container right">
           <div class="content">
@@ -45,7 +43,7 @@ layout: default
               <br />
               <div class="cv-city">Faculté d'Économie de Montpellier (34)</div>
             </h3>
-            <p>Big Data, Économétrie, Textmining, Machine Learning, Analytics, Web Scraping, Deep Learning</p>
+            <p>Big Data, Économétrie, Textmining, Machine Learning, Analytics, Web Scraping, Deep Learning, NLP</p>
           </div>
         </div>
 
@@ -56,7 +54,13 @@ layout: default
               <br />
               <div class="cv-city">DataCamp</div>
             </h3>
-            <p>Career-tracks : import, nettoyage, manipulation, visualisation</p>
+            <ul>
+              <li>SQL</li>
+              <li>Python : numpy, pandas, matplotlib</li>
+              <li>NLP : nltk, regexp, gensim, NER (named-entity recognition), SpaCy, polyglot  </li>
+              <li>Machine Learning</li>
+              <li>Deep Learning</li>
+            </ul>
           </div>
         </div>
 
@@ -111,7 +115,7 @@ layout: default
         <div class="container right">
           <div class="content">
             <h3>
-              2018-2020 - <a href="">Data Analyst / Consultant BI</a>
+              2018-2020 - <a>Data Analyst / Consultant BI</a>
               <br />
               <div class="cv-city">Business & Decision (B&D) - Montpellier (34)</div>
             </h3>
@@ -132,7 +136,7 @@ layout: default
         <div class="container right">
           <div class="content">
             <h3>
-              2018 - <a href="">Data Analyst / Assistant chercheur</a>
+              2018 - <a>Data Analyst / Assistant chercheur</a>
               <br />
               <div class="cv-city">Paris School of Economics (PSE) - Paris (75)</div>
             </h3>
@@ -147,7 +151,7 @@ layout: default
         <div class="container right">
           <div class="content">
             <h3>
-              2017 - <a href="">Data Analyst / Assistant chercheur</a>
+              2017 - <a>Data Analyst / Assistant chercheur</a>
               <br />
               <div class="cv-city">CHU Montpellier - Département Information Médicale (DIM) - CDD 2017 - Montpellier (34)</div>
             </h3>
@@ -160,7 +164,7 @@ layout: default
             <hr width="50%">
 
             <h3>
-              2017 - <a href="">Chargé de projet : Alumni</a>
+              2017 - <a>Chargé de projet : Alumni</a>
               <br />
               <div class="cv-city">Faculté d'Économie de Montpellier - CDD 2017 - Montpellier (34)</div>
             </h3>
@@ -180,7 +184,7 @@ layout: default
         <div class="container right">
           <div class="content">
             <h3>
-              2020 - <a href="">Stratégie d’amélioration pour la rétention client</a>
+              2020 - <a>Stratégie d’amélioration pour la rétention client</a>
               <br />
               <div class="cv-city">Rapport - D.U. Data Science - Montpellier (34)</div>
             </h3>
@@ -193,7 +197,7 @@ layout: default
             <hr width="50%">
 
             <h3>
-              2020 - <a href="">Création du blog TheAccountant</a>
+              2020 - <a>Création du blog TheAccountant</a>
               <br />
               <div class="cv-city">Blog personnel</div>
             </h3>
@@ -208,7 +212,7 @@ layout: default
         <div class="container right">
           <div class="content">
             <h3>
-              2017 - <a href="">L’influence des Smartphones sur l’Impatience</a>
+              2017 - <a>L’influence des Smartphones sur l’Impatience</a>
               <br />
               <div class="cv-city">Mémoire de recherche - Master Économie Comportementale - Montpellier (34)</div>
             </h3>
@@ -220,12 +224,12 @@ layout: default
             <hr width="50%">
 
             <h3>
-              2017 - <a href="">Le taux de pauvreté au seuil de 60% en Haut-Rhin</a>
+              2017 - <a>Le taux de pauvreté au seuil de 60% en Haut-Rhin</a>
               <br />
               <div class="cv-city">Rapport - Master Économie Comportementale - Montpellier (34)</div>
             </h3>
             <ul>
-              <li>Analyse des causes d'un fort taux de pauvreté par régression linéaire sous R</li>
+              <li>Analyse de causalité de la pauvreté par régression linéaire sous R</li>
               <li>Création d'une synthèse et présentation des résultats</li>
             </ul>
           </div>
@@ -234,7 +238,7 @@ layout: default
         <div class="container right">
           <div class="content">
             <h3>
-              2016 - <a href="">La vulnérabilité énergétique des ménages en Bourgogne</a>
+              2016 - <a>La vulnérabilité énergétique des ménages en Bourgogne</a>
               <br />
               <div class="cv-city">Rapport - Licence Économie - Dijon (21)</div>
             </h3>
@@ -262,5 +266,8 @@ layout: default
       document.getElementById(itemName).style.display = "block";
       evt.currentTarget.firstElementChild.className += " cv-border";
     }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
   </script>
 </div>
