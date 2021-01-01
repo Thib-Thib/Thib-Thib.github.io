@@ -49,17 +49,28 @@ blockquote {
     margin-bottom: 0;
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: 700px) {
     padding: 0 5rem 0 1.25rem;
   }
 }
 
 img {
   display: block;
-  margin: 0 0 1rem;
+  margin:auto;
   max-width: 100%;
 }
 
 td {
   vertical-align: top;
+}
+
+.logo {
+  display: block;
+  width: 40px;
+  margin-bottom: -10px;
+  @media (min-width: 700px) {
+    float: left;
+    width: 30px;
+    margin-right: 10px;
+  }
 }

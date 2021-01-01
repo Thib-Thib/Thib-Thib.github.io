@@ -1,8 +1,8 @@
 # Site settings
-title:          λambdata
+title:          Datasoupe
 description:    "Blog d'économie et de data science"
-#baseurl:        ""
-url:            "https://github.com/Thib-Thib"
+baseurl:        "datasoupe.fr"
+url:            "http://datasoupe.fr"
 
 # Google Analytics
 #google_analytics: UA—XXXXXXXX-X
