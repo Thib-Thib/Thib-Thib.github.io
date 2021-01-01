@@ -1,7 +1,7 @@
 # Site settings
 title:          Datasoupe
 description:    "Blog d'économie et de data science"
-baseurl:        "datasoupe.fr"
+#baseurl:        "datasoupe.fr"
 url:            "http://datasoupe.fr"
 
 # Google Analytics
